@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <title>algorithm</title>
+<link rel="stylesheet" href="style.css">
+<ul>
+  <li><a class="home" href="#">home</a></li>
+  <li><a href="https://rue5643.github.io/algorithm/">algorithm</a></li>
+  <li><a href="https://rue5643.github.io/atomic1/">atomic</a></li>
+  <li><a href="#">cassert</a></li>
+  <li><a href="https://www.naver.com/">test</a></li>
+</ul>
+<div class="cd1">
+  <h1 style="text-align:center">c++ header file</h1>
+
+  <h2 style="text-align:center">atomic</h2>
+  <table style="border-collapse: collapse; width: 100%;" border="1" data-ke-align="alignRight">
+    <h3>Integral Specializations</h3>
+    <h>The atomic&lt;integral&gt; specializations apply to all integral types. They provide additional operations that aren't available through the primary template.
+    Each atomic&lt;integral&gt; type has a corresponding macro that you can use in an if directive to determine at compile time whether operations on that type are lock-free. If the value of the macro is zero, operations on the type aren't lock-free. If the value is 1, operations might be lock-free, and a runtime check is required. If the value is 2, operations are lock-free. You can use the function atomic_is_lock_free to determine at runtime whether operations on the type are lock-free.
+    For each of the integral types, there's a corresponding named atomic type that manages an object of that integral type. Each atomic_integral type has the same set of member functions as the corresponding instantiation of atomic&lt;T&gt; and can be passed to any of the non-member atomic functions.</h>
+    <tr>
+      <th>atomic_integral Type</th>
+      <th>Integral Type</th>
+      <th>atomic_is_lock_free</th>
+    </tr>
+    <tr>
+      <th>atomic_char</th>
+      <th>char</th>
+      <th>ATOMIC_CHAR_LOCK_FREE</th>
+    </tr>
+    <tr>
+      <th>atomic_schar</th>
+      <th>signed char</th>
+      <th>ATOMIC_CHAR_FREE</th>
+    </tr>
+    <tr>
+      <th>atomic_uchar</th>
+      <th>unsinged char</th>
+      <th>ATOMIC_CHAR_FREE</th>
+    </tr>
+    <tr>
+      <th>atomic_char16_t</th>
+      <th>char16_t</th>
+      <th>ATOMIC_CHAR16_T_LOCK_FREE</th>
+    </tr>
+    <tr>
+      <th>atomic_char32_t</th>
+      <th>char32_t</th>
+      <th>ATOMIC_CHAR32_T_LOCK_FREE</th>
+    </tr>
+    <tr>
+      <th>atomic_wchar_t</th>
+      <th>wchar_t</th>
+      <th>ATOMIC_WCHAR_T_LOCK_FREE</th>
+    </tr>
+    <tr>
+      <th>atomic_short</th>
+      <th>short</th>
+      <th>ATOMIC_SHORT_LOCK_FREE</th>
+    </tr>
+    <tr>
+      <th>atomic_ushort</th>
+      <th>unsigned short</th>
+      <th>ATOMIC_SHORT_LOCK_FREE</th>
+    </tr>
+    <tr>
+      <th>atomic_int</th>
+      <th>int</th>
+      <th>ATOMIC_INT_LOCK_FREE</th>
+    </tr>
+    <tr>
+      <th>atomic_uint</th>
+      <th>unsigned int </th>
+      <th>ATOMIC_INT_LOCK_FREE</th>
+    </tr>
+    <tr>
+      <th>atomic_long</th>
+      <th>long</th>
+      <th>ATOMIC_LONG_LOCK_FREE</th>
+    </tr>
+    <tr>
+      <th>atomic_ulong</th>
+      <th>unsigned long</th>
+      <th>ATOMIC_LONG_LOCK_FREE</th>
+    </tr>
+    <tr>
+      <th>atomic_llong</th>
+      <th>long long</th>
+      <th>ATOMIC_LLONG_LOCK_FREE</th>
+    </tr>
+    <tr>
+      <th>atomic_ullong</th>
+      <th>unsigned long long</th>
+      <th>ATOMIC_LLONG_LOCK_FREE</th>
+    </tr>
+  </table>
+    <h>Typedef names exist for specializations of the atomic template for some of the types that are defined in the header< inttypes.h ></inttypes.h></h>
+      <table style="border-collapse: collapse; width: 100%;" border="1" data-ke-align="alignRight">
+
+      <tr>
+        <th>Atomic Type</th>
+        <th>Typedef Name</th>
+      </tr>
+      <tr>
+        <th>atomic_int8_t</th>
+        <th>atomic&lt;int8_t&gt;</th>
+      </tr>
+      <tr>
+        <th>atomic_uint8_t</th>
+        <th>atomic&lt;uint8_t&gt;</th>
+      </tr>
+      <tr>
+        <th>atomic_int16_t</th>
+        <th>atomic&lt;int16&gt;</th>
+      </tr>
+        <tr>
+          <th>atomic_uint16_t</th>
+          <th>atomic&lt;uint16&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_int32_t</th>
+          <th>atomic&lt;int32&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_uint32_t</th>
+          <th>atomic&lt;uint32&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_int64_t</th>
+          <th>atomic&lt;int64&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_uint64_t</th>
+          <th>atomic&lt;uint64&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_int_least8_t</th>
+          <th>atomic&lt;int_least8_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_uint_least8_t</th>
+          <th>atomic&lt;uint_least8_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_int_least16_t</th>
+          <th>atomic&lt;int_least16_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_uint_least16_t</th>
+          <th>atomic&lt;uint_least16_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_int_least32_t</th>
+          <th>atomic&lt;int_least32_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_uint_least32_t</th>
+          <th>atomic&lt;uint_least32_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_int_least64_t</th>
+          <th>atomic&lt;int_lesat64_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_uint_least64_t</th>
+          <th>atomic_&lt;uint_least64_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_int_fast8_t</th>
+          <th>atomic&lt;int_fast8_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_uint_fast8_t</th>
+          <th>atomic&lt;uint_fast8_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_int_fast16_t</th>
+          <th>atomic&lt;int_fast16_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_uint_fast16_t</th>
+          <th>atomic&lt;uint_fast16_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_int_fast32_t</th>
+          <th>atomic&lt;int_fast32_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_uint_fast32_t</th>
+          <th>atomic&lt;uint_fast32_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_int_fast64_t</th>
+          <th>atomic&lt;int_fast64_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_uint_fast64_t</th>
+          <th>atomic&lt;uint_fast64_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_intptr_t</th>
+          <th>atomic&lt;intptr_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_uintptr_t</th>
+          <th>atomic&lt;uintptr_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_size_t</th>
+          <th>atomic&lt;size_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_ptrdiff_t</th>
+          <th>atomic&lt;ptrdiff_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_intmax_t</th>
+          <th>atomic&lt;intmax_t&gt;</th>
+        </tr>
+        <tr>
+          <th>atomic_uintmax_t</th>
+          <th>atomic&lt;uintmax_t&gt;</th>
+        </tr>
+    </table>
+
+  <table style="border-collapse: collapse; width: 100%;" border="1" data-ke-align="alignRight">
+
+    <h3>Structs</h3>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <th>atomic Structure</th>
+      <th>Describes an object that performs atomic operations on a stored value.</th>
+    </tr>
+   <tr>
+     <th>atomic_flag_Structure</th>
+     <th>Describes an object that atomically sets and clears a bool flag.</th>
+   </tr>
+  </table>
+  <table style="border-collapse: collapse; width: 100%;" border="1" data-ke-align="alignRight">
+    <h3>Enums</h3>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <th>memory_orderEnum</th>
+      <th>Supplies symbolic names for synchronization operations on memory locations. These operations affect how assignments in one thread become visible in another.</th>
+    </tr>
+  </table>
+  <talbe style="border-collapse:collapse; width: 100%;" border="1" data-ke-align="alignright">
+    <h3>Functions</h3>
+    <h>In the follwing list, the funcions that don't end in _ecpicit have the semantics of the corresponding _explicit, except that they have the implicit memory_order arguments of memory_order_seq_cst.</h>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <th>atomic_compare_exchange_strong</th>
+      <th>Performs an atomic compare and exchange operation.</th>
+    </tr>
+    <tr>
+      <th>atomic_compare_exchange_strong explicit</th>
+      <th>Performs an atomic compare and exchange operation.</th>
+    </tr>
+    <tr>
+      <th>atomic_compare_exchange_weak</th>
+      <th>Performs a weak atomic compare and exchange operation.</th>
+    </tr>
+    <tr>
+      
+    </tr>
+  </talbe>
+</div>
+</html>
